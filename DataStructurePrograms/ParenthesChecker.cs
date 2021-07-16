@@ -10,6 +10,7 @@ namespace DataStructurePrograms
     {
         char[] list;
         int top = 0;
+        //Reading User Input
         public static void ReadInput()
         {
             Console.Write("Enter the Arithmetic Expression you want to valid : ");
