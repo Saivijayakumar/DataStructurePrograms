@@ -8,7 +8,7 @@ namespace DataStructurePrograms
 {
     class PrimeRange
     {
-         public static int[,] array = new int[1000, 1];
+         public static int[,] array = new int[500, 1];
         public static void MainPrimeMethod()
         {
             Prime(array);
@@ -16,8 +16,8 @@ namespace DataStructurePrograms
         }
         public static void Prime(int[,] array)
         {
-            
-            int row = 0, colum = 0;
+
+            int row = 0;
             int count = 1;
             int flag = 1;
             int start = 0;
@@ -52,8 +52,8 @@ namespace DataStructurePrograms
                 if (flag == 1)
                 {
                     //Console.Write(i + " ");
-                    array[0, 0] = ++count;
-                    array[1, 1] = i;
+                    array[row, 0] = ++count;
+                    array[++row, 1] = i;
                 }
             }
         }
