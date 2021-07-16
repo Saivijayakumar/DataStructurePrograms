@@ -25,12 +25,15 @@ namespace DataStructurePrograms
                 case 4:
                     BST.ReadInputForBST();
                     break;
+                case 5:
+                    CalenderPrint.PrintCalender();
+                    break;
                 default:
                     Console.WriteLine("Enter valid input");
                     break;
 
             }
-
+            PrimeRange.MainPrimeMethod();
             Console.Read();
         }
     }

@@ -44,10 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BST.cs" />
+    <Compile Include="CalenderPrint.cs" />
     <Compile Include="CustomLinkedList.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="OrderList.cs" />
     <Compile Include="ParenthesChecker.cs" />
+    <Compile Include="PrimeRange.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnOrderList.cs" />
