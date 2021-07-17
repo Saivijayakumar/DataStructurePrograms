@@ -13,10 +13,12 @@ namespace DataStructurePrograms
             //(2n)! / ((n + 1)! * n!) 
             Console.WriteLine("Enter a number 1-10 : ");
             long n = Convert.ToInt32( Console.ReadLine());
-            long  num1 = factorial(2 * n);
-            long num2 = factorial(n + 1);
+            long en = 2 * n;
+            long  num1 = factorial(en);
+            long num2 = factorial(en - n);
             long num3 = factorial(n);
-            long result = num1 / (num2 * num3);
+            long result1 = num1 / (num2 * num3);
+            long result = result1 / (n + 1);
             Console.WriteLine(result);
 
         }
