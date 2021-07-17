@@ -136,5 +136,33 @@ namespace DataStructurePrograms
                 return default;
             }
         }
+        public void Enqueue(T item)
+        {
+            Node<T> new_node = new Node<T>(item);
+            if (this.head == null)
+            {
+                this.head = new_node;
+            }
+            else
+            {
+                Node<T> temp = this.head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = new_node;
+            }
+        }
+        public void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty");
+            }
+            else
+            {
+                this.head = this.head.next;
+            }
+        }
     }
 }
