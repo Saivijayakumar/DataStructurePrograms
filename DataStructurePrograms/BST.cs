@@ -10,28 +10,21 @@ namespace DataStructurePrograms
     {
         public static void ReadInputForBST()
         {
-            //(2n)! / ((n + 1)! * n!) 
-            Console.WriteLine("Enter a number 1-10 : ");
-            long n = Convert.ToInt32( Console.ReadLine());
-            long en = 2 * n;
-            long  num1 = factorial(en);
-            long num2 = factorial(en - n);
-            long num3 = factorial(n);
-            long result1 = num1 / (num2 * num3);
-            long result = result1 / (n + 1);
-            Console.WriteLine(result);
-
-        }
-        public static long factorial(long n)
-        {
-            long res = 1;
-            for (int i = 1; i <= n; ++i)
+            Console.WriteLine("Enter a number : ");
+            long number = Convert.ToInt32(Console.ReadLine());
+            //This code works for parentheses like if you give number it give posible parentheses.
+            int[] catalan = new int[number + 1];
+            catalan[0] = catalan[1] = 1;
+            for (int i = 2; i <= number; i++)
             {
-                res *= i;
+                catalan[i] = 0;
+                for (int j = 0; j < i; j++)
+                {
+                    catalan[i] += catalan[j] * catalan[i - j - 1];
+                }
             }
-
-            return res;
+            double power = Math.Pow(10, 8) + 7;
+            Console.WriteLine("The posible BST's are :"+Math.Abs(catalan[number] % power));
         }
-
     }
 }
