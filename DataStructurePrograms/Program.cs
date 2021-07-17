@@ -7,7 +7,7 @@ namespace DataStructurePrograms
         static void Main(string[] args)
         {
             Console.WriteLine("---------------->Data Structure Programs<------------------");
-            Console.WriteLine("1.Unordered List\n2.Order List\n3.Balanced Parentheses\n4.Finding count of BST");
+            Console.WriteLine("1.Unordered List\n2.Order List\n3.Balanced Parentheses\n4.Finding count of BST\n5.Printing Calender");
             Console.WriteLine("-----------------------------------");
             Console.Write("Enter your choice :");
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -25,12 +25,13 @@ namespace DataStructurePrograms
                 case 4:
                     BST.ReadInputForBST();
                     break;
+                case 5:
+                    CalenderPrint.PrintCalender();
+                    break;
                 default:
                     Console.WriteLine("Enter valid input");
                     break;
-
             }
-
             Console.Read();
         }
     }
