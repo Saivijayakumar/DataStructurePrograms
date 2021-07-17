@@ -9,27 +9,22 @@ namespace DataStructurePrograms
     class BST
     {
         public static void ReadInputForBST()
-        {
-            //(2n)! / ((n + 1)! * n!) 
-            Console.WriteLine("Enter a number 1-10 : ");
-            long n = Convert.ToInt32( Console.ReadLine());
-            long  num1 = factorial(2 * n);
-            long num2 = factorial(n + 1);
-            long num3 = factorial(n);
-            long result = num1 / (num2 * num3);
-            Console.WriteLine(result);
-
-        }
-        public static long factorial(long n)
-        {
-            long res = 1;
-            for (int i = 1; i <= n; ++i)
+        { 
+            Console.WriteLine("Enter a number : ");
+            long number = Convert.ToInt32( Console.ReadLine());
+            //This code works for parentheses like if you give number it give posible parentheses.
+            int[] catalan = new int[number + 1];
+            catalan[0] = catalan[1] = 1;
+            for (int i = 2; i <= number; i++)
             {
-                res *= i;
+                catalan[i] = 0;
+                for (int j = 0; j < i; j++)
+                {
+                    catalan[i] += catalan[j] * catalan[i - j - 1];
+                }
             }
-
-            return res;
+            double power = Math.Pow(10, 8) + 7;
+            Console.WriteLine(Math.Abs(catalan[number] % power));
         }
-
     }
 }
