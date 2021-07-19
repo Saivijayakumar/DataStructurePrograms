@@ -8,7 +8,7 @@ namespace DataStructurePrograms
 {
     class PrimeRange
     {
-         public static int[,] array = new int[500, 1];
+         public static int[,] array = new int[170, 2];
         public static void MainPrimeMethod()
         {
             Prime(array);
@@ -17,7 +17,7 @@ namespace DataStructurePrograms
         public static void Prime(int[,] array)
         {
 
-            int row = 0;
+            int row = 1;
             int count = 1;
             int flag = 1;
             int start = 0;
@@ -28,7 +28,9 @@ namespace DataStructurePrograms
             }
             if (start == 2)
             {
-                Console.Write(start + " ");
+                //Console.Write(start + " ");
+                array[0, 0] = 1;
+                array[0, 1] = 2;
             }
             //Make sure the process starts with even number
             if (start % 2 == 0)
@@ -53,17 +55,19 @@ namespace DataStructurePrograms
                 {
                     //Console.Write(i + " ");
                     array[row, 0] = ++count;
-                    array[++row, 1] = i;
+                    array[row++, 1] = i;
                 }
             }
         }
         public static void Display(int[,] array)
         {
-            foreach(int i in array)
+            for(int i=0;i<168;i++)
             {
-                Console.Write(i + " ");
+                Console.Write(array[i, 0] + "-->");
+                Console.Write(array[i, 1]);
+                Console.WriteLine();
             }
+            Console.WriteLine(array.Length);
         }
-
     }
 }
