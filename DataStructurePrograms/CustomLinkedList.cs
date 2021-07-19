@@ -153,6 +153,17 @@ namespace DataStructurePrograms
                 temp.next = new_node;
             }
         }
+        public void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty");
+            }
+            else
+            {
+                this.head = this.head.next;
+            }
+        }
         public string DequeuePalindromeChecker()
         {
             string reverseString = "";

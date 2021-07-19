@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banking.cs" />
     <Compile Include="BST.cs" />
     <Compile Include="CalenderPrint.cs" />
     <Compile Include="CustomLinkedList.cs" />
