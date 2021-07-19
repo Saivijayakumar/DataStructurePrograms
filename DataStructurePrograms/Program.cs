@@ -31,6 +31,9 @@ namespace DataStructurePrograms
                 case 6:
                     PrimeRange.MainPrimeMethod();
                     break;
+                case 7:
+                    Palindrome.IsPalindrome();
+                    break;
                 default:
                     Console.WriteLine("Enter valid input");
                     break;

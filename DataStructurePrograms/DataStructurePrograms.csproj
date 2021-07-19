@@ -48,6 +48,7 @@
     <Compile Include="CustomLinkedList.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="OrderList.cs" />
+    <Compile Include="Palindrome.cs" />
     <Compile Include="ParenthesChecker.cs" />
     <Compile Include="PrimeRange.cs" />
     <Compile Include="Program.cs" />
