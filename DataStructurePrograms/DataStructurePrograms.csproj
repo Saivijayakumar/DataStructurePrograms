@@ -46,6 +46,8 @@
     <Compile Include="BST.cs" />
     <Compile Include="CalenderPrint.cs" />
     <Compile Include="CustomLinkedList.cs" />
+    <Compile Include="Hash.cs" />
+    <Compile Include="HashSlot.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="OrderList.cs" />
     <Compile Include="Palindrome.cs" />
