@@ -28,7 +28,6 @@ namespace DataStructurePrograms
                 default:
                     Console.WriteLine("Enter valid input");
                     break;
-
             }
 
             Console.Read();
