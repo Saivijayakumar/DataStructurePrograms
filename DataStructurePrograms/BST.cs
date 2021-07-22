@@ -10,21 +10,32 @@ namespace DataStructurePrograms
     {
         public static void ReadInputForBST()
         {
-            Console.WriteLine("Enter a number : ");
-            long number = Convert.ToInt32(Console.ReadLine());
-            //This code works for parentheses like if you give number it give posible parentheses.
-            int[] catalan = new int[number + 1];
-            catalan[0] = catalan[1] = 1;
-            for (int i = 2; i <= number; i++)
+            Console.Write("Enter a number : ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            if (number <= 0)
             {
-                catalan[i] = 0;
-                for (int j = 0; j < i; j++)
-                {
-                    catalan[i] += catalan[j] * catalan[i - j - 1];
-                }
+                Console.WriteLine("\nThe number should be greater than 0 ");
             }
-            double power = Math.Pow(10, 8) + 7;
-            Console.WriteLine("The posible BST's are :"+Math.Abs(catalan[number] % power));
+            else
+            {
+                Console.WriteLine($"\nFrom {number} nodes we can form {NumberOfTree(number)} BST's");
+            }
+        }
+        //Formula: t(n) = \sum_{i=1}^{n} t(i-1) t(n-i)  
+        //t(0) = 1 and t(1) = 1
+        //t(2) = t(0)t(1) + t(1)t(0) = 2  
+        private static int NumberOfTree(int n)
+        {
+            if (n == 1) return 1;
+            int sum = 0;
+            int left = 0, right = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                left = NumberOfTree(i - 1);
+                right = NumberOfTree(n - i);
+                sum += (left * right);
+            }
+            return sum;
         }
     }
 }
